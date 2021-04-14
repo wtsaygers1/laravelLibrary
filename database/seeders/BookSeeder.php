@@ -3,8 +3,10 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+// use App\Models\Book;
 
-class Book extends Seeder
+// class Book extends Seeder
+class BookSeeder extends Seeder
 {
     /**
      * Run the database seeds.
