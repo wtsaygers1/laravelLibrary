@@ -10,20 +10,24 @@ class BookController extends Controller
     //
   public function index(){
     
-    return Book::all();
+    return Book::all(); //R
+  }
+  
+  public function show($id){
+    return Book::find($id); //R, individual book
   }
   
   public function create(Request $request){
-    $book = new Book();
-    $book->title = "Clean Code";
-    $book->excerpt = "";
-    $book->reviews = "";
-    $book->ISBN = "";
-    $book->pages = 362;
-    $book->org_price = 19.99;
-    $books->curr_value = 6.99;
+//     $book = new Book();
+//     $book->title = "Clean Code";
+//     $book->excerpt = "";
+//     $book->reviews = "";
+//     $book->ISBN = "";
+//     $book->pages = 362;
+//     $book->org_price = 19.99;
+//     $books->curr_value = 6.99;
     
-    $book->save();
+//     $book->save();
   }
   
   public function update($id){
