@@ -17,24 +17,24 @@ class UserController extends Controller
     return User::find($id); //R, individual book
   }
   
-//   public function create(Request $request){
+  public function create(Request $request){
+    $user = User::factory()->make();
+    $user->full_name = $request->full_name;
+    
+    $user->save();
+    return $user;
+  }
+  
+  public function update(Request $request, $id){
+    $user = User::find($id);
 //     $book = Book::factory()->make();
-//     $book->title = $request->title;
+    $user->full_name = $request->full_name;
     
-//     $book->save();
-//     return $book;
-//   }
+    $user->save();
+    return $user;
+  }
   
-//   public function update(Request $request, $id){
-//     $book = Book::find($id);
-// //     $book = Book::factory()->make();
-//     $book->title = $request->title;
-    
-//     $book->save();
-//     return $book;
-//   }
-  
-//   public function delete($id){
-//     Book::find($id)->delete();
-//   }
+  public function delete($id){
+    User::find($id)->delete();
+  }
 }
