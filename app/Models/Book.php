@@ -13,4 +13,11 @@ class Book extends Model
     protected $primaryKey = 'id';
     public $incrementing = true;
     public $timestamps = true;
+    protected $fillable = [
+      'title', 'ISBN', 'excerpt', 'reviews', 'pages', 'org_price', 'curr_value', 'published'
+    ];
+   public function authorBooks()
+    {
+        return $this->hasMany(AuthorBook::class);
+    }
 }
