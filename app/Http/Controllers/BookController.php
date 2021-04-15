@@ -34,7 +34,7 @@ class BookController extends Controller
     return $book;
   }
   
-  public function destroy($id){
+  public function delete($id){
     Book::find($id)->delete();
   }
 }
