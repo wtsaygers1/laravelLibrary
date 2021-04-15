@@ -25,14 +25,13 @@ class BookController extends Controller
     return $book;
   }
   
-  public function update(Request $request){
+  public function update(Request $request, $id){
     $book = Book::find($id);
+//     $book = Book::factory()->make();
     $book->title = $request->title;
-//     $book->cost = 23.99;
     
     $book->save();
     return $book;
-  
   }
   
   public function destroy($id){
