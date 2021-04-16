@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Author;
+use App\Models\Book;
 use App\Models\AuthorBook;
 use Illuminate\Http\Request;
 
@@ -14,7 +16,7 @@ class AuthorBookController extends Controller
      */
     public function index()
     {
-        //
+        return authorBook::all(); //R
     }
 
     /**
@@ -24,7 +26,7 @@ class AuthorBookController extends Controller
      */
     public function create()
     {
-        //
+  
     }
 
     /**
@@ -46,7 +48,7 @@ class AuthorBookController extends Controller
      */
     public function show(AuthorBook $authorBook)
     {
-        //
+        return Author::find($id);
     }
 
     /**
