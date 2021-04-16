@@ -27,7 +27,6 @@ class BookController extends Controller
   
   public function update(Request $request, $id){
     $book = Book::find($id);
-//     $book = Book::factory()->make();
     $book->title = $request->title;
     
     $book->save();

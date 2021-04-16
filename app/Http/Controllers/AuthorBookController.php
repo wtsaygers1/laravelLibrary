@@ -52,7 +52,7 @@ class AuthorBookController extends Controller
      */
     public function show(AuthorBook $authorBook)
     {
-        return Author::find($id);
+
     }
 
     /**
@@ -73,9 +73,13 @@ class AuthorBookController extends Controller
      * @param  \App\Models\AuthorBook  $authorBook
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, AuthorBook $authorBook)
+    public function update(Request $request, $id)
     {
-        //
+           $authorBook = AuthorBook::find($id);
+           $authorBook->author_id = $request->author_id;
+    
+           $authorBook->save();
+           return $authorBook;
     }
 
     /**
@@ -84,8 +88,8 @@ class AuthorBookController extends Controller
      * @param  \App\Models\AuthorBook  $authorBook
      * @return \Illuminate\Http\Response
      */
-    public function destroy(AuthorBook $authorBook)
+    public function delete($id)
     {
-        //
+          AuthorBook::find($id)->delete();
     }
 }

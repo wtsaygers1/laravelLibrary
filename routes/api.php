@@ -28,6 +28,8 @@ Route::post('/authorbook/new', [App\Http\Controllers\AuthorBookController::class
 
 Route::post('/book/update/{id}', [App\Http\Controllers\BookController::class, 'update']);
 Route::post('/user/update/{id}', [App\Http\Controllers\UserController::class, 'update']);
+Route::post('/authorbook/update/{id}', [App\Http\Controllers\AuthorBookController::class, 'update']);
 
 Route::post('/book/delete/{id}', [App\Http\Controllers\BookController::class, 'delete']);
 Route::post('/user/delete/{id}', [App\Http\Controllers\UserController::class, 'delete']);
+Route::post('/authorbook/delete/{id}', [App\Http\Controllers\AuthorBookController::class, 'delete']);
