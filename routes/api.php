@@ -24,6 +24,7 @@ Route::get('/authorbook/all', [App\Http\Controllers\AuthorBookController::class,
 
 Route::post('/book/new', [App\Http\Controllers\BookController::class, 'create']);
 Route::post('/user/new', [App\Http\Controllers\UserController::class, 'create']);
+Route::post('/authorbook/new', [App\Http\Controllers\AuthorBookController::class, 'create']);
 
 Route::post('/book/update/{id}', [App\Http\Controllers\BookController::class, 'update']);
 Route::post('/user/update/{id}', [App\Http\Controllers\UserController::class, 'update']);

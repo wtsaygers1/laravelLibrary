@@ -16,7 +16,7 @@ class AuthorBookController extends Controller
      */
     public function index()
     {
-        return authorBook::all(); //R
+        return AuthorBook::all(); //R
     }
 
     /**
@@ -26,7 +26,11 @@ class AuthorBookController extends Controller
      */
     public function create()
     {
-  
+          $authorBook = AuthorBook::factory()->make();
+    
+          $authorBook->save();
+          return $authorBook;   
+     
     }
 
     /**
